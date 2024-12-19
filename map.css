@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background-color: #c7a2768f
+}
+
+/* Header */
+header {
+    background-color: #c7a2768f;
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header img {
+    width: 100px;
+}
+
+/* Navigation */
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    background-color: #634132aa;
+    padding: 10px 0;
+}
+li {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 20px;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.hamburger{
+    display:none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #000;
+}
+
+@media(max-width:768px){
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-chiled(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-chiled(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-chiled(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction:column;
+        background-color: #634132c9;
+        width: 70%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+}
+/* MAP */
+.container{
+width: 100%;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+h1{
+    color: #333;
+    margin-bottom: 60px;
+}
+
+iframe{
+    width: 80%;
+    height: 500px;
+}
+
+/* Footer */
+footer {
+    background-color: #634132aa;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media(max-width:768px){
+    footer{
+        gap: 1px;
+    }
+
+    footer img{
+        width: 22px;
+        height: 22px;
+    }
+}
